@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Statistics</title>
+    <style>
+        *{
+            font-family:Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: #F8F9FA;
+            padding: 2px;
+        }
+
+        .header-title {
+            color: #2e2e2ed2;
+            text-align: center;
+        }
+
+        .header-img {
+            height: 70px;
+        }
+
+        .hero {
+            position: relative;
+        }
+
+        .hero-img {
+            width: 100vw;
+            height: 40vh;
+            object-fit:cover
+        }
+
+        .description-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ffffff3b;
+            backdrop-filter: blur(5px);
+            padding: 20px;
+            min-width: 300px;
+            font-size: 12px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 50px 2px black;
+        }
+
+        .description-container h2 {
+            margin-bottom: 15px;
+        }
+
+        .graph-container {
+            display: grid;
+            width: 100vw;
+            padding: 60px 0;
+        }
+
+        .graph-container img{
+            width: 100vw
+        }
+        
+        @media (min-width: 480px) {
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                max-height: 70px;
+                background: #F8F9FA;
+            }
+            .header-title {
+                text-align: right;
+                font-size: 55px;
+                color: #2e2e2ed2;
+            }
+            .hero-img {
+                height: auto;
+            }
+            .description-container {
+                font-size: 20px;
+            }
+            .graph-container {
+                display: flex;
+                justify-content: space-around;
+            }
+            .graph-container img{
+                width: 40vw;
+            }
+            .graph-wraper {
+                width: 40vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="header-img" src="fulllogogbu.png" alt="">
+        <h1 class="header-title">Placement Statistics</h1>
+    </div>
+    <div class="hero">
+        <img class="hero-img" src="banner-ICT.jpg" alt="">
+        <div class="description-container">
+            <h2>Description:-</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis animi ad assumenda iure eaque nulla quos mollitia? Pariatur cum eos, quod id qui iste officiis inventore necessitatibus expedita molestias facere!</p>
+        </div>
+    </div>
+
+    <div class="graph-container">
+        <div class="graph-wraper">
+            <canvas id="barChart" width="300" height="300"></canvas>
+        </div>
+        <img src="companies.png" alt="">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
